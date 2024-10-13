@@ -1,0 +1,54 @@
+package net.vamsi.studentservice.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+import net.vamsi.studentservice.dto.StudentDto;
+import net.vamsi.studentservice.entity.Student;
+import net.vamsi.studentservice.repository.StudentRepository;
+import net.vamsi.studentservice.service.StudentService;
+
+@Service
+@AllArgsConstructor
+public class StudentServiceImpl implements StudentService{
+	
+	
+	@Autowired
+	private StudentRepository studentrepo;
+
+	@Override
+	public StudentDto saveStudent(StudentDto studentDto) {
+		
+		Student student = new Student(
+				studentDto.getStudentId(),
+				studentDto.getStudentfirstName(),
+				studentDto.getStudentlastName()
+				);
+		Student saveStudent = studentrepo.save(student);
+		
+		StudentDto savedstudentDto=new StudentDto(
+				saveStudent.getStudentId(),
+				saveStudent.getStudentfirstName(),
+				saveStudent.getStudentlastName()
+				
+				);
+		
+		return savedstudentDto;
+	}
+
+	@Override
+	public StudentDto getById(Long id) {
+		Student student=studentrepo.findById(id).get();
+		
+		StudentDto savedStudentDto=new StudentDto(
+				student.getStudentId(),
+				student.getStudentfirstName(),
+				student.getStudentlastName()
+				
+				);		
+		
+		return savedStudentDto;
+	}
+
+}

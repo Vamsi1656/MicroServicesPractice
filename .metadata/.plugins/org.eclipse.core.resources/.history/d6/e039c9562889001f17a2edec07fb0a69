@@ -1,0 +1,5 @@
+package net.vamsi.degreeservice.entity;
+
+public class Degree {
+
+}

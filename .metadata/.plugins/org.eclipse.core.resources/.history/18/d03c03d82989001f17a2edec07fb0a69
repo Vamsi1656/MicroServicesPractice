@@ -1,0 +1,5 @@
+package net.vamsi.degreeservice.service.impl;
+
+public class DegreeServiceImpl {
+
+}

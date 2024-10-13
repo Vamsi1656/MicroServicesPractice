@@ -1,0 +1,5 @@
+package net.vamsi.degreeservice.repository;
+
+public interface DegreeRepository {
+
+}

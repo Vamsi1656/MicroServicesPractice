@@ -1,0 +1,5 @@
+package net.vamsi.studentservice.entity;
+
+public class StudentEntity {
+
+}

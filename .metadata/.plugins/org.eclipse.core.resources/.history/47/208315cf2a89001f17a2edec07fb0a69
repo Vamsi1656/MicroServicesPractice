@@ -1,0 +1,5 @@
+package net.vamsi.degreeservice.controller;
+
+public class DegreeController {
+
+}

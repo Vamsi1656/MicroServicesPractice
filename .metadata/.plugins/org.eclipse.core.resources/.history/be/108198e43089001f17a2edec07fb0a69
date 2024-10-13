@@ -1,0 +1,5 @@
+package net.vamsi.studentservice.controller;
+
+public class StudentController {
+
+}

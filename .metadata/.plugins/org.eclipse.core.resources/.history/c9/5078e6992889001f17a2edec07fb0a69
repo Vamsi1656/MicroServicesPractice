@@ -1,0 +1,14 @@
+package net.vamsi.degreeservice.entity;
+
+public class Degree {
+	
+	
+	private Long id;
+	
+	private String degreeName;
+	
+	private String degreeSpecilization;
+	
+	private String degreeCode;
+
+}

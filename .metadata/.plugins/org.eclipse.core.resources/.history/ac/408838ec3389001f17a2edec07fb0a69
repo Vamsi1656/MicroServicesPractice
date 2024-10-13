@@ -1,0 +1,5 @@
+package net.vamsi.studentservice.dto;
+
+public class DegreeDto {
+
+}

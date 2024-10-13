@@ -1,0 +1,32 @@
+package net.vamsi.degreeservice.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+import net.vamsi.degreeservice.dto.DegreeDto;
+import net.vamsi.degreeservice.entity.Degree;
+import net.vamsi.degreeservice.repository.DegreeRepository;
+import net.vamsi.degreeservice.service.DegreeService;
+
+@Service
+@AllArgsConstructor
+public class DegreeServiceImpl implements DegreeService {
+	
+	@Autowired
+	private DegreeRepository degreeRepo;
+
+	@Override
+	public DegreeDto saveDegree(DegreeDto degreeDto) {
+		Degree degree=new Degree(
+				degreeDto.getId(),
+				degreeDto.getDegreeName(),
+				degreeDto.getDegreeSepcilization(),
+				degreeDto.getDegreeCode()
+				);
+		
+		Degree savedegree=degreeRepo.save(degree);
+		return null;
+	}
+
+}
