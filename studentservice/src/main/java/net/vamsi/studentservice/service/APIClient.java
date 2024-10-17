@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import net.vamsi.studentservice.dto.DegreeDto;
 
-@FeignClient(url="http://localhost:8803",value="DEGREE-SERVICE")
+@FeignClient(name="DEGREESERVICE")
 public interface APIClient {
 	
 	@GetMapping("api/degrees/{degreeCode}")
