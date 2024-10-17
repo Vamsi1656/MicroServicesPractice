@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="staffdepartmentservice" />
         <module name="degreeservice" />
         <module name="studentservice" />
         <module name="service-registry" />
+        <module name="staffservice" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +18,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="degreeservice" options="-parameters" />
       <module name="service-registry" options="-parameters" />
+      <module name="staffdepartmentservice" options="-parameters" />
+      <module name="staffservice" options="-parameters" />
       <module name="studentservice" options="-parameters" />
     </option>
   </component>

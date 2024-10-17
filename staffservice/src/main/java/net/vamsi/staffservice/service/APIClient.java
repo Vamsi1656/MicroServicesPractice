@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import net.vamsi.staffservice.dto.StaffDepartmentDto;
 
-@FeignClient(url = "http://localhost:8805",value = "STAFFDEPARTMENT-SERVICE")
+@FeignClient(name="STAFFDEPARTMENTSERVICE")
 public interface APIClient {
 	
 	@GetMapping("/api/staffdepartments/{staffCode}")
